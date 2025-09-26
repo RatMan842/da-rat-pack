@@ -11,9 +11,9 @@ p1 {font-size: 100%; color: black; font-family: Papyrus;}
   p3{font-size: 100%; color:red; font-family:papyrus;}
 button1 {font-size: 110%; color: indigo; font-family: cursive;}
   p2 {font-size: 100%; color: black; font-family:minecraft;}
-  .button2{font-size: 110%; width: 220; height:110; color: crimson; font-family: cursive;}
-  .button3{font-size: 110%; width: 220; height:110; color: salmon; font-family: cursive;}
-  .button4{font-size: 110%; width: 220; height:110; color: black; font-family: cursive;}
+  button2{font-size: 110%; width: 220; height:110; color: crimson; font-family: cursive;}
+  button3{font-size: 110%; width: 220; height:110; color: salmon; font-family: cursive;}
+  button4{font-size: 110%; width: 220; height:110; color: black; font-family: cursive;}
 @font-face {
     font-family: "minecraft";
     src: url("minecraft.ttf") format("TrueType");
@@ -34,6 +34,21 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
     <button1 id="fishbtn" border="0" padding="0" onclick="pressfish()" onclick="document.getElementById('fishsnd').playsound(fishsnd);">fish</button1>
 </center>
     <script>
+      const button = document.getElementById('voidbtn');
+        const body = document.body;
+
+        button.addEventListener('click', () => {
+            if (body.classList.contains('default-cursor')) {
+                body.classList.remove('default-cursor');
+                body.classList.add('voidMouse');
+            } else {
+                body.classList.remove('voidMouse');
+                body.classList.add('default-cursor');
+            }
+        });
+
+        // Set initial cursor style
+        body.classList.add('default-cursor');
       function pressfish() {
         var fishsnd = document.getElementById("fishsnd");
         fishsnd.autoplay = 'false'
