@@ -5,8 +5,12 @@
 h1 {font-size: 200%; color: orange; font-family: Papyrus;}
 h2 {font-size: 150%; color: darkgray; font-family: Papyrus;}
 p1 {font-size: 100%; color: black; font-family: Papyrus;}
+  p3{font-size: 100%; color:red; font-family:papyrus;}
 button1 {font-size: 110%; color: indigo; font-family: cursive;}
   p2 {font-size: 100%; color: black; font-family:minecraft;}
+  buttonVoid{font-size: 110%; color: crimson; font-family: cursive;}
+  buttonFish{font-size: 110%; color: salmon; font-family: cursive;}
+  buttonP{font-size: 110%; color: black; font-family: cursive;}
 @font-face {
     font-family: "minecraft";
     src: url("minecraft.ttf") format("TrueType");
@@ -20,6 +24,7 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
 <h1>Welcome to my secret coding place!</h1>
 <h2>This is where i code goofy things!</h2>
 <p1>welcome to my space where i think about and try to teach myself html coding.</p1>
+    <p2>please join and or support the bringers of light now!!!!(link below)<br>https://github.com/RatMan842/esheesle.github.io</p2>
 <audio id='fishsnd'><source src="fish.mp3" preload="auto" onended="audioEnded()"></audio>
 <center>
   <img> <br><br><br> <img id="fishwebp" style="text-align:center;" src="assets/fish.webp" alt=fish.webp width="285" height="200" usemap="#fish.webp" onclick="pressfish()" onclick="document.getElementById('fishsnd').playsound(fishsnd);"></img></img><br>
@@ -29,7 +34,7 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
       function pressfish() {
         var fishsnd = document.getElementById("fishsnd");
         fishsnd.autoplay = 'false'
-        fishsnd.load();
+        fishsnd.load()
       }
           function audioEnded() {
       document.getElementById('fishsnd').currentTime = 0;
@@ -40,5 +45,8 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
     }
     </script>
     <p2 class="minecraft">&lt;Null&gt; err.null/hello<br></p2>
+    <buttonVoid id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/voidmouse.png')">void mouse</buttonVoid>
+    <buttonFish id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/fishmouse.png')">fish mouse</buttonFish>
+    <buttonP id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/mouseP.png')">:P mouse</buttonP>
   </body>
 </html>
