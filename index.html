@@ -11,9 +11,9 @@ p1 {font-size: 100%; color: black; font-family: Papyrus;}
   p3{font-size: 100%; color:red; font-family:papyrus;}
 button1 {font-size: 110%; color: indigo; font-family: cursive;}
   p2 {font-size: 100%; color: black; font-family:minecraft;}
-  button3{font-size: 110%; color: crimson; font-family: cursive;}
-  button4{font-size: 110%; color: salmon; font-family: cursive;}
-  button5{font-size: 110%; color: black; font-family: cursive;}
+  .button2{font-size: 110%; width: 220; height:110; color: crimson; font-family: cursive;}
+  .button3{font-size: 110%; width: 220; height:110; color: salmon; font-family: cursive;}
+  .button4{font-size: 110%; width: 220; height:110; color: black; font-family: cursive;}
 @font-face {
     font-family: "minecraft";
     src: url("minecraft.ttf") format("TrueType");
@@ -46,13 +46,7 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
       var audio = document.getElementById('fishsnd');
       audio.play();
     }
-    </script>
-    <p2 class="minecraft">&lt;Null&gt; err.null/hello<br></p2>
-    <button3 id="voidbtn" style="text-align:center;" onclick="cursor;url('assets/voidmouse.png')" >void mouse</button3>
-    <button4 id="fishmous" style="text-align:center;" onclick="cursor;url('assets/fishmouse.png')">fish mouse</button4>
-    <button5 id="Pbtn" style="text-align:center;" onclick="cursor;url('assets/mouseP.png')">:P mouse</button5>
-    <script>
-  function voidCursor() {
+        function voidCursor() {
     document.body.style.cursor = "assets/voidmouse";
   }
   function fishCursor() {
@@ -61,9 +55,10 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
         function PCursor() {
     document.body.style.cursor = "assets/mouseP";
   }
-  document.getElementById("voidbtn").addEventListener("click", voidCursor);
-  document.getElementById("fishbtn").addEventListener("click", fishCursor);
-  document.getElementById("Pbtn").addEventListener("click", PCursor);
-</script>
+    </script>
+    <p2 class="minecraft">&lt;Null&gt; err.null/hello<br></p2>
+    <button class="button2"; id="voidbtn" style="text-align:center;" onclick="cursor;url('assets/voidmouse.png')" >void mouse</button>
+    <button class="button3"; id="fishmous" style="text-align:center;" onclick="cursor;url('assets/fishmouse.png')">fish mouse</button>
+    <button class="button4"; id="Pbtn" style="text-align:center;" onclick="cursor;url('assets/mouseP.png')">:P mouse</button>
   </body>
 </html>
