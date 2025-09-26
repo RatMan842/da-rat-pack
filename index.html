@@ -8,9 +8,9 @@ p1 {font-size: 100%; color: black; font-family: Papyrus;}
   p3{font-size: 100%; color:red; font-family:papyrus;}
 button1 {font-size: 110%; color: indigo; font-family: cursive;}
   p2 {font-size: 100%; color: black; font-family:minecraft;}
-  buttonVoid{font-size: 110%; color: crimson; font-family: cursive;}
-  buttonFish{font-size: 110%; color: salmon; font-family: cursive;}
-  buttonP{font-size: 110%; color: black; font-family: cursive;}
+  button3{font-size: 110%; color: crimson; font-family: cursive;}
+  button4{font-size: 110%; color: salmon; font-family: cursive;}
+  button5{font-size: 110%; color: black; font-family: cursive;}
 @font-face {
     font-family: "minecraft";
     src: url("minecraft.ttf") format("TrueType");
@@ -45,8 +45,15 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
     }
     </script>
     <p2 class="minecraft">&lt;Null&gt; err.null/hello<br></p2>
-    <buttonVoid id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/voidmouse.png')">void mouse</buttonVoid>
-    <buttonFish id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/fishmouse.png')">fish mouse</buttonFish>
-    <buttonP id="fishbtn" border="0" padding="0" onclick="cursor;url('assets/mouseP.png')">:P mouse</buttonP>
+    <button3 id="voidbtn" border="2" padding="5" onclick="cursor;url('assets/voidmouse.png')" >void mouse</button3>
+    <button4 id="fishmous" border="2" pading="5" onclick="cursor;url('assets/fishmouse.png')">fish mouse</button4>
+    <button5 id="pbtn" border="2" padding="5" onclick="cursor;url('assets/mouseP.png')">:P mouse</button5>
+    <script>
+  function changeCursor() {
+    document.body.style.cursor = "assets/voidmouse";
+  }
+
+  document.getElementById("voidbtn").addEventListener("click", changeCursor);
+</script>
   </body>
 </html>
