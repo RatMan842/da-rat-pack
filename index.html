@@ -41,13 +41,12 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
         button.addEventListener('click', () => {
             if (body.classList.contains('default-cursor')) {
                 body.classList.remove('default-cursor');
-                body.classList.add('voidMouse');
+                body.classList.add('void-cursor');
             } else {
-                body.classList.remove('voidMouse');
+                body.classList.remove('void-cursor');
                 body.classList.add('default-cursor');
             }
         });
-
         // Set initial cursor style
         body.classList.add('default-cursor');
       function pressfish() {
