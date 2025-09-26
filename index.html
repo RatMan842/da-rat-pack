@@ -45,15 +45,22 @@ button1 {font-size: 110%; color: indigo; font-family: cursive;}
     }
     </script>
     <p2 class="minecraft">&lt;Null&gt; err.null/hello<br></p2>
-    <button3 id="voidbtn" border="2" padding="5" onclick="cursor;url('assets/voidmouse.png')" >void mouse</button3>
-    <button4 id="fishmous" border="2" pading="5" onclick="cursor;url('assets/fishmouse.png')">fish mouse</button4>
-    <button5 id="pbtn" border="2" padding="5" onclick="cursor;url('assets/mouseP.png')">:P mouse</button5>
+    <button3 id="voidbtn" style="text-align:center;" border="2" padding="5" onclick="cursor;url('assets/voidmouse.png')" >void mouse</button3>
+    <button4 id="fishmous" style="text-align:center;" border="2" pading="5" onclick="cursor;url('assets/fishmouse.png')">fish mouse</button4>
+    <button5 id="Pbtn" style="text-align:center;" border="2" padding="5" onclick="cursor;url('assets/mouseP.png')">:P mouse</button5>
     <script>
-  function changeCursor() {
+  function voidCursor() {
     document.body.style.cursor = "assets/voidmouse";
   }
-
-  document.getElementById("voidbtn").addEventListener("click", changeCursor);
+  function fishCursor() {
+    document.body.style.cursor = "assets/fishmouse";
+  }
+        function PCursor() {
+    document.body.style.cursor = "assets/mouseP";
+  }
+  document.getElementById("voidbtn").addEventListener("click", voidCursor);
+  document.getElementById("fishbtn").addEventListener("click", fishCursor);
+  document.getElementById("Pbtn").addEventListener("click", PCursor);
 </script>
   </body>
 </html>
